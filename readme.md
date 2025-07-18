@@ -1,5 +1,33 @@
 # Project base in roadmap.sh todo list api
 - Link: https://roadmap.sh/projects/todo-list-api
+    
+# Estrutura de Projeto - Clean Architecture com Go
+
+```bash
+go-clean-architecture/
+├── cmd/
+│   └── api/
+│       └── main.go                     # Ponto de entrada da aplicação
+├── internal/
+│   ├── domain/
+│   │   └── user.go                     # Entidades e interfaces do domínio
+│   ├── usecase/
+│   │   └── user_usecase.go            # Lógica de negócio (casos de uso)
+│   ├── interface/
+│   │   ├── handler/
+│   │   │   └── user_handler.go        # Controladores / Handlers (HTTP)
+│   │   └── repository/
+│   │       └── user_repository.go     # Interfaces dos repositórios
+│   └── infrastructure/
+│       └── db/
+│           └── postgres.go            # Implementação de acesso ao banco (PostgreSQL)
+├── scripts/
+│   └── migrations/
+│       ├── 001_create_users_table.up.sql    # Migration para criação de tabela
+│       └── 001_create_users_table.down.sql  # Rollback da migration
+├── go.mod
+└── go.sum
+```
 
 # Goals
 The skills you will learn from this project include:
